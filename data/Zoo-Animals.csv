@@ -1,0 +1,80 @@
+Enclosure_ID,Animal_ID,SubSpecies,Name,Age,Gender,Arrival_Date,Health_Status
+01/0001,W-3572,Emperor Penguin,None,25,Male,2023-08-22,Under Treatment
+01/0001,F-4289,Emperor Penguin,None,10,Male,2018-02-04,Under Treatment
+01/0001,J-2915,Emperor Penguin,None,13,Female,2016-08-18,Healthy
+01/0001,F-7308,Emperor Penguin,None,22,Male,2011-01-26,Under Treatment
+01/0001,J-5889,Emperor Penguin,None,7,Female,2024-02-06,Healthy
+01/0001,W-7566,Emperor Penguin,None,10,Female,2023-11-21,Minor Issues
+01/0001,W-5738,Emperor Penguin,None,3,Female,2022-01-07,Minor Issues
+01/0001,A-8735,Emperor Penguin,None,16,Male,2020-01-18,Under Treatment
+01/0001,F-1568,Emperor Penguin,None,25,Male,2019-04-10,Healthy
+01/0001,F-1304,Emperor Penguin,None,22,Female,2005-10-27,Healthy
+01/0002,J-7690,Gentoo Penguin,None,1,Female,2024-08-28,Healthy
+01/0002,W-1138,Gentoo Penguin,None,11,Male,2016-07-18,Minor Issues
+01/0002,F-9861,Gentoo Penguin,None,1,Male,2024-10-17,Healthy
+01/0002,F-2818,Gentoo Penguin,None,24,Male,2006-10-02,Under Treatment
+01/0002,J-6283,Gentoo Penguin,None,3,Male,2022-05-23,Under Treatment
+01/0002,A-5664,Gentoo Penguin,None,3,Male,2023-07-22,Healthy
+01/0002,W-1166,Gentoo Penguin,None,9,Male,2022-12-26,Under Treatment
+01/0002,J-8419,Gentoo Penguin,None,16,Female,2017-05-20,Under Treatment
+01/0003,A-6459,Humbolt Penguin,None,6,Male,2020-07-27,Under Treatment
+01/0003,J-6149,Humbolt Penguin,None,20,Male,2006-12-21,Under Treatment
+01/0003,W-9242,Humbolt Penguin,None,9,Male,2022-01-08,Minor Issues
+01/0003,J-3351,Humbolt Penguin,None,5,Female,2024-01-09,Healthy
+01/0003,A-4674,Humbolt Penguin,None,16,Female,2024-07-27,Under Treatment
+01/0003,W-9525,Humbolt Penguin,None,1,Male,2024-12-17,Under Treatment
+01/0004,W-7521,Flamingos,None,3,Female,2022-06-17,Under Treatment
+01/0004,A-9912,Flamingos,None,23,Female,2024-03-01,Minor Issues
+01/0004,W-2517,Flamingos,None,15,Female,2018-06-26,Under Treatment
+01/0004,F-6882,Flamingos,None,16,Female,2009-10-31,Under Treatment
+01/0004,J-7594,Flamingos,None,17,Female,2010-11-05,Healthy
+01/0004,J-2608,Flamingos,None,25,Male,2007-05-01,Under Treatment
+01/0004,J-7809,Flamingos,None,9,Female,2016-06-12,Under Treatment
+01/0004,A-6954,Flamingos,None,15,Female,2020-03-02,Minor Issues
+01/0004,A-1366,Flamingos,None,2,Male,2024-09-23,Minor Issues
+01/0004,F-4783,Flamingos,None,21,Male,2009-01-23,Under Treatment
+01/0004,A-5050,Flamingos,None,7,Male,2022-11-25,Healthy
+01/0004,F-3510,Flamingos,None,7,Female,2020-11-09,Minor Issues
+01/0004,W-5577,Flamingos,None,4,Male,2022-09-18,Healthy
+01/0004,A-3333,Flamingos,None,19,Female,2021-01-27,Under Treatment
+01/0004,W-2902,Flamingos,None,25,Female,2002-10-24,Under Treatment
+02/0006,F-2560,Lions,Nala,21,Female,2019-07-31,Under Treatment
+02/0006,A-8804,Lions,Duke,20,Female,2012-03-13,Minor Issues
+02/0006,F-6013,Lions,Samson,21,Male,2010-04-15,Under Treatment
+02/0006,W-4013,Lions,Samson,25,Female,2002-06-27,Minor Issues
+02/0006,W-2962,Lions,Samson,25,Female,2010-07-11,Healthy
+02/0007,A-5741,Tigers,Tyson,12,Female,2024-05-26,Healthy
+02/0007,F-2935,Tigers,Tyson,17,Male,2008-05-29,Under Treatment
+02/0008,A-7280,Jaguars,Tyson,10,Male,2015-11-12,Healthy
+02/0008,A-8907,Jaguars,Zeus,6,Male,2022-12-30,Healthy
+02/0009,A-4144,Lynx,Prince,3,Female,2024-07-20,Under Treatment
+02/0009,W-6124,Lynx,Leo,5,Male,2024-10-13,Minor Issues
+02/0009,F-3498,Lynx,Fang,24,Male,2014-04-19,Healthy
+02/0009,F-5258,Lynx,Tyson,9,Male,2016-12-01,Under Treatment
+02/0009,A-5882,Lynx,Simba,8,Male,2019-12-25,Minor Issues
+02/0009,J-1780,Lynx,Zeus,2,Female,2024-02-06,Under Treatment
+03/0011,W-9251,Gorillas,Kiki,19,Female,2013-06-30,Under Treatment
+03/0011,A-1782,Gorillas,Milo,18,Female,2023-10-21,Under Treatment
+03/0011,W-6482,Gorillas,Lola,14,Male,2023-03-22,Healthy
+03/0012,W-4525,Chimpanzees,Lola,23,Male,2005-04-08,Healthy
+03/0012,F-4591,Chimpanzees,Kiki,15,Male,2024-09-17,Minor Issues
+03/0012,J-4563,Chimpanzees,Bella,19,Male,2017-04-02,Minor Issues
+03/0012,F-1926,Chimpanzees,Milo,7,Female,2024-01-25,Under Treatment
+03/0012,F-9228,Chimpanzees,Milo,3,Male,2022-10-21,Under Treatment
+03/0012,J-2231,Chimpanzees,Milo,3,Male,2022-12-31,Under Treatment
+03/0012,A-7999,Chimpanzees,Lola,10,Male,2016-05-25,Under Treatment
+03/0013,F-5159,Capuchins,Lola,23,Female,2022-11-16,Healthy
+03/0013,W-9431,Capuchins,Max,3,Male,2022-12-15,Healthy
+03/0013,J-7314,Capuchins,Milo,15,Female,2010-03-20,Minor Issues
+03/0013,J-1409,Capuchins,Max,21,Female,2004-08-23,Under Treatment
+03/0014,J-3606,Orangutans,Bella,5,Female,2023-08-03,Minor Issues
+03/0014,F-7201,Orangutans,Bongo,19,Female,2006-03-01,Healthy
+03/0014,A-8122,Orangutans,Milo,14,Male,2019-11-24,Under Treatment
+03/0014,J-5953,Orangutans,Max,7,Male,2018-02-10,Minor Issues
+03/0014,F-2399,Orangutans,Lola,15,Male,2024-04-19,Healthy
+03/0015,F-2773,Golden Snub-Nosed Monkeys,Bella,16,Female,2021-07-02,Healthy
+03/0015,J-6346,Golden Snub-Nosed Monkeys,Lola,10,Male,2020-05-08,Under Treatment
+03/0015,J-3610,Golden Snub-Nosed Monkeys,Charlie,18,Male,2023-04-29,Minor Issues
+03/0015,A-4212,Golden Snub-Nosed Monkeys,Milo,25,Female,2008-04-27,Healthy
+03/0015,J-2757,Golden Snub-Nosed Monkeys,Bongo,22,Male,2018-10-16,Healthy
+03/0015,J-9437,Golden Snub-Nosed Monkeys,Bongo,1,Male,2024-02-01,Minor Issues

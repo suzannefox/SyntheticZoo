@@ -1,0 +1,16 @@
+Enclosure_ID,Name,WikiURL,Zone,Animal,Capacity,Current_Number,Diet,Status,Closed_Date
+01/0001,Darwin,https://en.wikipedia.org/wiki/Charles_Darwin,Aquatic,Penguins,10,10,Fish,Open,
+01/0002,Wallace,https://en.wikipedia.org/wiki/Alfred_Russel_Wallace,Aquatic,Penguins,10,8,Fish,Open,
+01/0003,Huxley,https://en.wikipedia.org/wiki/Thomas_Henry_Huxley,Aquatic,Penguins,10,6,Fish,Open,
+01/0004,Audubon,https://en.wikipedia.org/wiki/John_James_Audubon,Aquatic,Flamingos,15,15,Plants,Open,
+01/0005,Cousteau,https://en.wikipedia.org/wiki/Jacques_Cousteau,Aquatic,Starfish and Stingrays,0,0,Various,Closed,2023-12-21
+02/0006,Livingstone,https://en.wikipedia.org/wiki/David_Livingstone,Big Cats,Lions,5,5,Meat,Open,
+02/0007,Bates,https://en.wikipedia.org/wiki/Henry_Walter_Bates,Big Cats,Tigers,3,2,Meat,Open,
+02/0008,Humboldt,https://en.wikipedia.org/wiki/Alexander_von_Humboldt,Big Cats,Jaguars,2,2,Meat,Open,
+02/0009,VonFrisch,https://en.wikipedia.org/wiki/Karl_von_Frisch,Big Cats,Lynx,6,6,Meat,Open,
+02/0010,Cougar,https://en.wikipedia.org/wiki/Cougar,Big Cats,Cheetahs,0,0,Meat,Closed,2024-03-26
+03/0011,Leakey,https://en.wikipedia.org/wiki/Louis_Leakey,Monkeys,Gorillas,3,3,Plants,Open,
+03/0012,Goodall,https://en.wikipedia.org/wiki/Jane_Goodall,Monkeys,Chimpanzees,8,7,Plants,Open,
+03/0013,Fossey,https://en.wikipedia.org/wiki/Dian_Fossey,Monkeys,Capuchins,4,4,Fruits,Open,
+03/0014,Koehler,https://en.wikipedia.org/wiki/Wolfgang_Köhler,Monkeys,Orangutans,5,5,Fruits,Open,
+03/0015,Zhou,https://en.wikipedia.org/wiki/Zhou_Cheng,Monkeys,Golden Snub-Nosed Monkeys,6,6,Plants,Open,
