@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import datetime
 from datetime import timedelta
 
@@ -8,10 +9,10 @@ df_Calendar = pd.read_csv('./data/Zoo-Calendar.csv')
 
 st.set_page_config(page_title="Daily Visits During 2024")
 
-# Create an interactive line chart
-fig = px.line(df_Calendar, x="date", y="visits", title="Visits Over the Year 2024",
-              labels={"date": "Date", "visits": "Number Of Visits", "weekend": "Weekend"},
-              hover_data={"weekend": True} )
+# # Create an interactive line chart
+# fig = px.line(df_Calendar, x="date", y="visits", title="Visits Over the Year 2024",
+#               labels={"date": "Date", "visits": "Number Of Visits", "weekend": "Weekend"},
+#               hover_data={"weekend": True} )
     
 # fig.update_layout(
 #     xaxis_title="Date",
@@ -51,5 +52,32 @@ fig = px.line(df_Calendar, x="date", y="visits", title="Visits Over the Year 202
 #     ),
 #     yaxis=dict(title="Number of Visits"),
 # )
+
+# Create a figure using plotly.graph_objects
+fig = go.Figure()
+
+# Add a line trace
+fig.add_trace(
+    go.Scatter(
+        x=df_Calendar["date"],
+        y=df_Calendar["visits"],
+        mode="lines",
+        name="Visits",
+        hovertemplate=(
+            "Date: %{x}<br>"
+            "Number of Visits: %{y}<br>"
+            "Weekend: %{customdata}<extra></extra>"
+        ),
+        customdata=df_Calendar["weekend"].map({True: "Yes", False: "No"}),  # Map weekend info
+    )
+)
+
+# Customize the layout
+fig.update_layout(
+    title="Visits Over the Year 2024",
+    xaxis_title="Date",
+    yaxis_title="Number of Visits",
+    hoverlabel=dict(bgcolor="white", font_size=12, font_family="Arial"),
+)
 
 st.plotly_chart(fig, use_container_width=True)
