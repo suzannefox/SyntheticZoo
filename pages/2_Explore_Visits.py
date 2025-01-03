@@ -13,12 +13,12 @@ fig = px.line(df_Calendar, x="date", y="visits", title="Visits Over the Year 202
               labels={"date": "Date", "visits": "Number Of Visits", "weekend": "Weekend"},
               hover_data={"weekend": True} )
     
-# fig.update_layout(
-#     xaxis_title="Date",
-#     yaxis_title="Visits",
-#     template="plotly_white",  # Optional: cleaner template
-#     xaxis=dict(rangeslider=dict(visible=True))  # Enable range slider
-# )
+fig.update_layout(
+    xaxis_title="Date",
+    yaxis_title="Visits",
+    template="plotly_white",  # Optional: cleaner template
+    xaxis=dict(rangeslider=dict(visible=True))  # Enable range slider
+)
 
 # # Mark Bank Holidays
 # for date in df_Calendar[df_Calendar["type"] != 'Normal Day']["date"]:
