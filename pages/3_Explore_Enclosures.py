@@ -87,8 +87,8 @@ fig.update_layout(
         showticklabels=False, # Remove tick labels
         ticks='',             # Remove tick marks
     ),
-    height=700,  # Height of the graph
-    width=700,   # Width of the graph (equal to height for square)
+    height=600,  # Height of the graph
+    width=600,   # Width of the graph (equal to height for square)
     margin=dict(
     l=0,   # Left margin
     r=100, # Right margin (increase to push plot left)
