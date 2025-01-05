@@ -103,6 +103,7 @@ fig.update_layout(
 )
 
 # Render the Plotly figure in Streamlit
+st.subheader('Enclosure Locations')
 st.plotly_chart(fig, use_container_width=True)
 
 # --------------------------------------------------------------------------------------
