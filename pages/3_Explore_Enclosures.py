@@ -74,7 +74,7 @@ fig.update_layout(
     xaxis=dict(
         range=[0, 10],
         title="",
-        #showgrid=False,       # Remove grid lines
+        showgrid=False,       # Remove grid lines
         zeroline=False,       # Remove zero line
         showticklabels=False, # Remove tick labels
         ticks='',             # Remove tick marks
@@ -82,7 +82,7 @@ fig.update_layout(
     yaxis=dict(
         range=[0, 10],
         title="",
-        #showgrid=False,       # Remove grid lines
+        showgrid=False,       # Remove grid lines
         zeroline=False,       # Remove zero line
         showticklabels=False, # Remove tick labels
         ticks='',             # Remove tick marks
