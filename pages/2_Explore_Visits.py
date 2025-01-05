@@ -53,32 +53,4 @@ fig.update_layout(
     yaxis=dict(title="Number of Visits"),
 )
 
-# ----------------- Works -------------------------------------
-# # Create a figure using plotly.graph_objects
-# fig = go.Figure()
-
-# # Add a line trace
-# fig.add_trace(
-#     go.Scatter(
-#         x=df_Calendar["date"],
-#         y=df_Calendar["visits"],
-#         mode="lines",
-#         name="Visits",
-#         hovertemplate=(
-#             "Date: %{x}<br>"
-#             "Number of Visits: %{y}<br>"
-#             "Weekend: %{customdata}<extra></extra>"
-#         ),
-#         customdata=df_Calendar["weekend"].map({True: "Yes", False: "No"}),  # Map weekend info
-#     )
-# )
-
-# # Customize the layout
-# fig.update_layout(
-#     title="Visits Over the Year 2024",
-#     xaxis_title="Date",
-#     yaxis_title="Number of Visits",
-#     hoverlabel=dict(bgcolor="white", font_size=12, font_family="Arial"),
-# )
-
 st.plotly_chart(fig, use_container_width=True)
