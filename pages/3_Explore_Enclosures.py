@@ -89,11 +89,11 @@ fig.update_layout(
     ),
     height=700,  # Height of the graph
     width=700,   # Width of the graph (equal to height for square)
-        margin=dict(
-        l=0,   # Left margin
-        r=100, # Right margin (increase to push plot left)
-        t=30,  # Top margin
-        b=30   # Bottom margin
+    margin=dict(
+    l=0,   # Left margin
+    r=100, # Right margin (increase to push plot left)
+    t=0,  # Top margin
+    b=0   # Bottom margin
     )
 )
 
