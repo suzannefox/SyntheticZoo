@@ -102,9 +102,11 @@ fig.update_layout(
     yaxis_scaleanchor="x"  # Link the y-axis scale to the x-axis scale
 )
 
+config = {'displayModeBar': False}
+
 # Render the Plotly figure in Streamlit
 st.subheader('Enclosure Locations')
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True, config=config)
 
 # --------------------------------------------------------------------------------------
 # Create HTML for the DataFrame with smaller font size
