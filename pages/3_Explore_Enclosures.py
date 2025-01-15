@@ -11,6 +11,35 @@ st.set_page_config(page_title="Enclosures")
 # ------------------------------------------------------------------------------------
 
 df_Enclosures = pd.read_csv('./data/Zoo-Enclosures.csv')
+dict_enc_coords = [{'Enclosure_ID':'01/0001', 'x':1.0, 'y':9.0},
+                   {'Enclosure_ID':'01/0002', 'x':2.5, 'y':8.5},
+                   {'Enclosure_ID':'01/0003', 'x':3.0, 'y':7.5},
+                   {'Enclosure_ID':'01/0004', 'x':6.0, 'y':9.0},
+                   {'Enclosure_ID':'01/0005', 'x':8.0, 'y':7.5},
+
+                   {'Enclosure_ID':'02/0006', 'x':1.2, 'y':7.5},
+                   {'Enclosure_ID':'02/0007', 'x':3.7, 'y':5.8},
+                   {'Enclosure_ID':'02/0008', 'x':0.7, 'y':5.5},
+                   {'Enclosure_ID':'02/0009', 'x':3.2, 'y':4.0},
+                   {'Enclosure_ID':'02/0010', 'x':6.0, 'y':3.0},
+
+                   {'Enclosure_ID':'03/0011', 'x':2.5, 'y':2.5},
+                   {'Enclosure_ID':'03/0012', 'x':3.5, 'y':2.7},
+                   {'Enclosure_ID':'03/0013', 'x':3.2, 'y':1.2},
+                   {'Enclosure_ID':'03/0014', 'x':7.5, 'y':1.5},
+                   {'Enclosure_ID':'03/0015', 'x':8.7, 'y':2.0}]
+
+df_Coord = pd.DataFrame(dict_enc_coords)
+
+df_Enclosures = pd.merge(df_Enclosures, df_Coord, on='Enclosure_ID', how='outer')
+df_Enclosures['Colour'] = df_Enclosures['Closed_Date'].apply(lambda x: 'Blue' if pd.isna(x) else 'Red')
+#df_Enclosures['Text'] = df_Enclosures.apply(lambda row: f"{row['x']} {row['y']} : {row['Name']} ({row['Enclosure_ID']}) home of {row['Animal']}", axis=1)
+df_Enclosures['Text'] = df_Enclosures.apply(lambda row: f"{row['Name']} ({row['Enclosure_ID']}) home of {row['Animal']}", axis=1)
+
+list_x = df_Enclosures['x'].tolist()
+list_y = df_Enclosures['y'].tolist()
+list_text = df_Enclosures['Text'].tolist()
+list_colour = df_Enclosures['Colour'].tolist()
 
 st.subheader('Zone information')
 df_Summary = df_Enclosures[df_Enclosures['Status'] == 'Open'].groupby('Zone').agg({
@@ -39,19 +68,17 @@ fig = go.Figure()
 
 fig.add_trace(
     go.Scatter(
-        x=[1.0, 2.5, 3.0, 6.0, 8.0],
-        y=[9.0, 8.5, 7.5, 9.0, 7.5],
+        x=list_x,
+        y=list_y,
         mode='markers',  # Include text in the mode
-        text=["Darwin Enclosure, Penguins",
-            "Penguins",
-            "Penguins",
-            "Starfish (Closed)",
-            "Flamingoes"],  # Custom text for each point
+        text = list_text,
         textposition="top center",  # Position of the text relative to the marker
         hoverinfo="text",  # Only show the custom text in the hover tooltip
-        marker=dict(size=20, 
-                    color=["blue", "blue", "blue", "red", "blue"]
-        )
+        marker=dict(size=10, 
+                    line=dict(width=5,color='Black'), 
+                    symbol='circle-open',
+                    color=list_colour,
+                    opacity=0.8)
     )
 )
 

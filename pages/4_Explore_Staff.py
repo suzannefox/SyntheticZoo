@@ -61,3 +61,18 @@ st.subheader('Enclosure Staff')
 # st.dataframe(df_Display.style.hide(axis="index"))
 st.write(df_Display.to_html(index=False), unsafe_allow_html=True)
 
+# ---------------------------------------------------------------------------------------
+
+# Compute 'Text' column using lambda and apply
+y = df_Enclosures[['Enclosure_ID','Zone','Name']]
+y.columns = ['Enclosure_ID','Zoney','Namey']
+df_Staff = pd.merge(df_Staff, y, on='Enclosure_ID', how='outer')
+
+df_Staff['myZone'] = df_Staff.apply(lambda row: row['Zone'] if pd.isna(row['Enclosure_ID']) else row['Zoney'], axis=1)
+df_Staff['Text'] = df_Staff.apply(lambda row: f"{row['Name']} ({row['Role']}) in the {row['myZone']} Zone", axis=1)
+
+df_StaffList = df_Staff[['Staff_ID','FTE','Start_time','Text']]
+
+st.subheader('All Staff List')
+# st.dataframe(df_Display.style.hide(axis="index"))
+st.write(df_StaffList.to_html(index=False), unsafe_allow_html=True)
