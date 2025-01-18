@@ -33,8 +33,13 @@ df_Coord = pd.DataFrame(dict_enc_coords)
 
 df_Enclosures = pd.merge(df_Enclosures, df_Coord, on='Enclosure_ID', how='outer')
 df_Enclosures['Colour'] = df_Enclosures['Closed_Date'].apply(lambda x: 'Blue' if pd.isna(x) else 'Red')
-#df_Enclosures['Text'] = df_Enclosures.apply(lambda row: f"{row['x']} {row['y']} : {row['Name']} ({row['Enclosure_ID']}) home of {row['Animal']}", axis=1)
-df_Enclosures['Text'] = df_Enclosures.apply(lambda row: f"{row['Name']} ({row['Enclosure_ID']}) home of {row['Animal']}", axis=1)
+# df_Enclosures['Text'] = df_Enclosures.apply(lambda row: f"{row['Name']} ({row['Enclosure_ID']}) home for {row['Animal']}\
+#                                             {', ' + row['Status'] if row['Status'] == 'Closed' else ''}", axis=1)
+
+df_Enclosures['Text'] = df_Enclosures.apply(lambda row: "".join([
+                                            f"{row['Name']} ({row['Enclosure_ID']}) home for {row['Animal']}",
+                                            f"{', CLOSED on ' + row['Closed_Date'] if row['Status'] == 'Closed' else ''}"
+                                        ]), axis=1)
 
 list_x = df_Enclosures['x'].tolist()
 list_y = df_Enclosures['y'].tolist()
@@ -74,9 +79,9 @@ fig.add_trace(
         text = list_text,
         textposition="top center",  # Position of the text relative to the marker
         hoverinfo="text",  # Only show the custom text in the hover tooltip
-        marker=dict(size=10, 
-                    line=dict(width=5,color='Black'), 
-                    symbol='circle-open',
+        marker=dict(size=20, 
+                    line=dict(width=5,color='White'), 
+                    symbol='star-open',
                     color=list_colour,
                     opacity=0.8)
     )
@@ -145,6 +150,7 @@ st.markdown("""
 config = {'displayModeBar': False}
 # Render the Plotly figure in Streamlit
 st.subheader('Enclosure Locations')
+st.markdown("""Hover over the markers to see the enclosure details.""")
 st.plotly_chart(fig, use_container_width=True, config=config)
 
 # --------------------------------------------------------------------------------------
