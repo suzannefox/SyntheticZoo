@@ -48,7 +48,7 @@ df_result = df_grouped.pivot(index='Month', columns='Order Type', values='Budget
 df_result.columns.name = None
 df_result['Total'] = df_result.iloc[:, 1:].sum(axis=1)
 df_result = df_result[['Month','Total','Coffee', 'Tea', 'Meat','Fish','Fruit','Plants']]
-df_result = df_result.applymap(lambda x: f"£{x:,.2f}" if isinstance(x, (int, float)) else x)
+df_result = df_result.map(lambda x: f"£{x:,.2f}" if isinstance(x, (int, float)) else x)
 
 html_result = render_dataframe_with_highlight(df_result, highlight_col_idx=1, highlight_color='lightgrey')
 # Render the styled table in Streamlit
@@ -72,7 +72,7 @@ df_result.columns.name = None
 df_result['Total'] = df_result.iloc[:, 1:].sum(axis=1)
 df_result = df_result[['Month','Total','Coffee', 'Tea', 'Meat','Fish','Fruit','Plants']]
 
-df_result = df_result.applymap(lambda x: f"£{x:,.2f}" if isinstance(x, (int, float)) else x)
+df_result = df_result.map(lambda x: f"£{x:,.2f}" if isinstance(x, (int, float)) else x)
 
 html_result = render_dataframe_with_highlight(df_result, highlight_col_idx=1, highlight_color='lightgrey')
 # Render the styled table in Streamlit
