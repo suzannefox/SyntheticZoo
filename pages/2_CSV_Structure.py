@@ -26,8 +26,8 @@ def glimpse(file_name):
 st.set_page_config(page_title="CSV Structure")
 
 files = ['Zoo-Zones.csv', 'Zoo-Enclosures.csv', 'Zoo-Animals.csv', 'Zoo-Staff.csv', 
-         'Zoo-Budgets.csv', 'Zoo-Calendar.csv', 'Zoo-Invoices.csv',
-         'Zoo-Visits.csv',]
+         'Zoo-Budgets.csv', 'Zoo-Invoices.csv',
+         'Zoo-Calendar.csv', 'Zoo-Visits.csv',]
 
 for file in files:
     glimpse(file)
