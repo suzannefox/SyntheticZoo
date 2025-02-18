@@ -4,11 +4,12 @@ import pandas as pd
 st.set_page_config(page_title="Coffee Break :coffee:")
 
 # ------------------------------------------------------------------------------------
-data = [{'Description':"Simon & Garfunkel - It's all happening at the Zoo",'Link':'https://www.youtube.com/watch?v=6xKLBne1CoI'},
-        {'Description':'Edinburgh Zoo Penguin inspects the Norweigian Army','Link':'https://www.youtube.com/watch?v=Hq-6wUWffkA'},
+data = [{'Description': "Simon & Garfunkel - It's all happening at the Zoo",'Link':'https://www.youtube.com/watch?v=6xKLBne1CoI'},
+        {'Description': 'Edinburgh Zoo Penguin inspects the Norweigian Army','Link':'https://www.youtube.com/watch?v=Hq-6wUWffkA'},
         {'Description': 'Golden Snub Nose Monkeys eating bananas','Link':'https://www.youtube.com/watch?v=8FaB1gohPZI'},
-        {'Description':'Orangutans at Paignton Zoo','Link':'https://www.youtube.com/watch?v=Q0LNWU5T4Os'},
-        {'Description':'BBC and Open University - Ethics of Zoos','Link':'https://www.youtube.com/watch?v=aQDYxTCIVRE'}]
+        {'Description': 'Orangutans at Paignton Zoo','Link':'https://www.youtube.com/watch?v=Q0LNWU5T4Os'},
+        {'Description': 'BBC and Open University - Ethics of Zoos','Link':'https://www.youtube.com/watch?v=aQDYxTCIVRE'},
+        {'Description': 'Penguin Parade in Hokkaido', 'Link':'https://www.youtube.com/watch?v=kwOHV6QFHJk'}]
 
 df_videos = pd.DataFrame(data)
 
